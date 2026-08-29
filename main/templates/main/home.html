@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Green Valley School{% endblock %}
+
+{% block content %}
+<div class='hero'>
+    <h1>Welcome to Green Valley School</h1>
+    <p>Empowering Students for a Brighter Tomorrow</p>
+</div>
+
+<div class='section'>
+    <h2>Latest Announcements</h2>
+    {% if announcements %}
+        <ul>
+        {% for item in announcements %}
+            <li>
+                <strong>{{ item.title }}</strong> - <em>{{ item.created_at|date:'F j, Y' }}</em>
+                <p>{{ item.content }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No announcements at this time.</p>
+    {% endif %}
+</div>
+
+<div class='section'>
+    <h2>Upcoming Events</h2>
+    {% if events %}
+        <ul>
+        {% for event in events %}
+            <li>
+                <strong>{{ event.title }}</strong> - <em>{{ event.date|date:'F j, Y' }}</em>
+                <p>{{ event.description }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No upcoming events scheduled.</p>
+    {% endif %}
+</div>
+{% endblock %}
