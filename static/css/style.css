@@ -9,3 +9,37 @@ main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 ul { list-style: none; }
 li { border-bottom: 1px solid #eee; padding: 0.75rem 0; }
 li:last-child { border-bottom: none; }
+/* Clean styling for Django forms */
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1b4d3e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
