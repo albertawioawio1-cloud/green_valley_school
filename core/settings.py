@@ -4,3 +4,4 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     # ... keep the rest unchanged
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
