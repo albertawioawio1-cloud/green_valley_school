@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import ContactMessage
+from .models import ContactMessage, Announcement, Event
 
-@admin.register(ContactMessage)
-class ContactMessageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'subject', 'created_at')
-    search_fields = ('name', 'email', 'subject', 'message')
-    readonly_fields = ('created_at',)
+admin.site.register(ContactMessage)
+admin.site.register(Announcement)
+admin.site.register(Event)
